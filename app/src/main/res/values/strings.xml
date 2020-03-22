@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Proyecto_Cafeteria</string>
+    <string name="title_home">Home</string>
+    <string name="title_pedido">Pedido</string>
+    <string name="title_perfil">Perfil</string>
+    <string name="title_producto">Producto</string>
+    <string name="title_admin_pedido">Pedido</string>
+    <string name="title_admin_producto">Producto</string>
+    <string name="title_admin_cliente">Cliente</string>
+
+</resources>
