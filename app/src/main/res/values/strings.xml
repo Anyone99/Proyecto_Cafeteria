@@ -25,5 +25,10 @@
     <string name="button_modificar">Modificar</string>
     <string name="button_eliminar">Eliminar</string>
     <string name="titulo_modificar_usuario">Modificar el Usuario</string>
+    <string name="text_descripcion">Descripción</string>
+    <string name="text_precio">Precio</string>
+    <string name="text_stock">Stock</string>
+    <string name="title_add_producto">Añadir Productos</string>
+    <string name="button_limpiar">Limpiar</string>
 
 </resources>

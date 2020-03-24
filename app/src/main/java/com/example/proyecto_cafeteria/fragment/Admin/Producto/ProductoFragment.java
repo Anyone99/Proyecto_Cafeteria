@@ -63,7 +63,13 @@ public class ProductoFragment extends Fragment {
         button_modify = getActivity().findViewById(R.id.button_producto_modify);
         edit_buscar = getActivity().findViewById(R.id.edit_producto_nombre);
 
+        button_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+
+            }
+        });
 
     }
 

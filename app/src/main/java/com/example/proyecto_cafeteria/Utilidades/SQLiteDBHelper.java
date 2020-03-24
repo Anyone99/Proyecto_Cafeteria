@@ -32,6 +32,7 @@ public class SQLiteDBHelper extends SQLiteOpenHelper {
     private static final String CREATE_PRODUCTO = "CREATE TABLE IF NOT EXISTS " + Producto.TABLE_NAME + " ("
             + Producto.ID_PRODUCTO + " Integer PRIMARY KEY AUTOINCREMENT,"
             + Producto.NOMBRE_PRODUCTO + " TEXT NOT NULL, "
+            + Producto.DESCRIPCION_PRODUCTO + " TEXT NOT NULL, "
             + Producto.PRECIO_PRODUCTO + " FLOAT NOT NULL, "
             + Producto.STOCK_PRODUCTO + " INTEGER NOT NULL)";
 
