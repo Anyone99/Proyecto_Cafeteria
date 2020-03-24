@@ -4,8 +4,26 @@
     <string name="title_pedido">Pedido</string>
     <string name="title_perfil">Perfil</string>
     <string name="title_producto">Producto</string>
-    <string name="title_admin_pedido">Pedido</string>
-    <string name="title_admin_producto">Producto</string>
-    <string name="title_admin_cliente">Cliente</string>
+    <string name="title_cliente">Cliente</string>
+    <string name="text_login">"Bienvenida ! "</string>
+    <string name="text_usuario">usuario</string>
+    <string name="text_password">contraseña</string>
+    <string name="button_login">Iniciar Sessión</string>
+    <string name="button_Registrar">Registrar</string>
+    <string name="text_nombre">Nombre</string>
+    <string name="text_apellido">Apellido</string>
+    <string name="text_fnacimiento">Fecha de Nacimiento:</string>
+    <string name="text_telefono">Teléfono</string>
+    <string name="radio_usuario">Usuario</string>
+    <string name="radio_admin">Admin</string>
+    <string name="text_registrar_usuario">Registrar tu Cuenta</string>
+    <string name="text_email">Email</string>
+    <string name="button_cancel">Cancelar</string>
+    <string name="title_reserva">Reserva</string>
+    <string name="button_buscar">Buscar</string>
+    <string name="button_add">Añadir</string>
+    <string name="button_modificar">Modificar</string>
+    <string name="button_eliminar">Eliminar</string>
+    <string name="titulo_modificar_usuario">Modificar el Usuario</string>
 
 </resources>

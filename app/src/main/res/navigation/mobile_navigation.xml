@@ -7,27 +7,27 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.proyecto_cafeteria.fragment.home.HomeFragment"
+        android:name="com.example.proyecto_cafeteria.fragment.User.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_inicio" />
 
     <fragment
         android:id="@+id/navigation_producto"
-        android:name="com.example.proyecto_cafeteria.fragment.Producto.ProductoFragment"
+        android:name="com.example.proyecto_cafeteria.fragment.User.Producto.ProductoFragment"
         android:label="@string/title_producto"
         tools:layout="@layout/fragment_producto" />
 
 
     <fragment
         android:id="@+id/navigation_pedido"
-        android:name="com.example.proyecto_cafeteria.fragment.Pedido.PedidoFragment"
+        android:name="com.example.proyecto_cafeteria.fragment.User.Pedido.PedidoFragment"
         android:label="@string/title_pedido"
         tools:layout="@layout/fragment_pedido" />
 
 
     <fragment
         android:id="@+id/navigation_perfil"
-        android:name="com.example.proyecto_cafeteria.fragment.Perfil.PerfilFragment"
+        android:name="com.example.proyecto_cafeteria.fragment.User.Perfil.PerfilFragment"
         android:label="@string/title_perfil"
         tools:layout="@layout/fragment_perfil" />
 </navigation>
