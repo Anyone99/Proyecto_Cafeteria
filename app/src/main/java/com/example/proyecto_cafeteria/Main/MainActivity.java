@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.proyecto_cafeteria.Entry.Admin;
 import com.example.proyecto_cafeteria.Entry.User;
+import com.example.proyecto_cafeteria.Main.Cliente.RegistrarPanelActivity;
 import com.example.proyecto_cafeteria.R;
 import com.example.proyecto_cafeteria.Utilidades.SQLiteDBHelper;
 

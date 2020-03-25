@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:layout_height="45dp"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_carrito" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout"
+        android:layout_above="@+id/relativeLayout">
+
+        <ListView
+            android:id="@+id/list_carrito"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+
+        <CheckBox
+            android:id="@+id/check_carrito"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/radiobutton_off_background"
+            android:text="@string/text_seleccionaTodos"
+            android:textColor="#FF000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/prices"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toStartOf="@+id/button3"
+            android:layout_toLeftOf="@+id/button3"
+            android:gravity="center"
+            android:text="@string/text_precioPrincipal"
+            android:textColor="#FFFA4F4F"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toStartOf="@+id/prices"
+            android:layout_toLeftOf="@+id/prices"
+            android:gravity="center"
+            android:text="@string/text_Total"
+            android:textColor="#FF000000"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_toStartOf="@+id/button4"
+            android:layout_toLeftOf="@+id/button4"
+            android:text="@string/text_Pagar"
+            android:background="#FFFFB11C"
+            />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:text="@string/button_eliminar"
+            android:background="#FFFA4F4F"/>
+
+    </RelativeLayout>
+</RelativeLayout>

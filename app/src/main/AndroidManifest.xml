@@ -19,9 +19,12 @@
             </intent-filter>
         </activity>
         <activity android:label="@string/app_name" android:name=".Main.UserPanelActivity"/>
-        <activity android:label="@string/app_name" android:name=".Main.RegistrarPanelActivity"/>
+        <activity android:label="@string/app_name" android:name=".Main.Cliente.RegistrarPanelActivity"/>
         <activity android:label="@string/app_name" android:name=".Main.AdminPanelActivity"/>
-        <activity android:label="@string/app_name" android:name=".Main.ModificarPanelActivity"/>
+        <activity android:label="@string/app_name" android:name=".Main.Cliente.ModificarPanelActivity"/>
+        <activity android:label="@string/app_name" android:name=".Main.Producto.AddProductoPanelActivity"/>
+        <activity android:label="@string/app_name" android:name=".Main.Producto.ModificarProductoPanelActivity"/>
+        <activity android:label="@string/app_name" android:name=".Main.Carrito"/>
 
 
     </application>

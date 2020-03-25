@@ -25,7 +25,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="af8b2a97-9c40-4100-ba7f-ce638a750152">
-        <schema name="main" object-types="table, view" />
+        <schema name="main" object-types="table, column, view, index, constraint, dataset trigger" />
       </connection>
     </loaded-nodes>
   </component>
@@ -41,6 +41,7 @@
     <connection id="af8b2a97-9c40-4100-ba7f-ce638a750152" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="af8b2a97-9c40-4100-ba7f-ce638a750152" dataset="main.Producto" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="af8b2a97-9c40-4100-ba7f-ce638a750152" dataset="main.Admin" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="af8b2a97-9c40-4100-ba7f-ce638a750152" dataset="main.Usuario" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="af8b2a97-9c40-4100-ba7f-ce638a750152" dataset="main.android_metadata" active-filter-id="EMPTY_FILTER" />
@@ -83,7 +84,7 @@
           <port value="1234" />
           <database value="database" />
           <files>
-            <file path="$USER_HOME$/Documents/AndroidStudio/DeviceExplorer/emulator-5554/data/data/com.example.proyecto_cafeteria/databases/Cafeteria" schema="main" />
+            <file path="$USER_HOME$/Downloads/Cafeteria" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />
