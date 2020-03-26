@@ -2,6 +2,7 @@ package com.example.proyecto_cafeteria.Adapter;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +14,14 @@ import android.widget.TextView;
 import com.example.proyecto_cafeteria.Entity.ProductoEntity;
 import com.example.proyecto_cafeteria.R;
 
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class Usuario_ProductoAdaptador extends BaseAdapter {
@@ -94,38 +99,48 @@ public class Usuario_ProductoAdaptador extends BaseAdapter {
                     } else {
                         carrito.put(producto, 1);
                     }
-
                 }
 
-                guardarPerferences(carrito);
+                try {
+                    guardarPerferences(carrito);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 System.err.println("Carrito : " + carrito.get(producto) + " --> " + producto.toString());
 
+                notifyDataSetChanged();
 
             }
         });
-
         return convertView;
     }
 
-    public void guardarPerferences(HashMap<ProductoEntity, Integer> carrito) {
+    public void guardarPerferences(HashMap<ProductoEntity, Integer> carrito) throws IOException {
         SharedPreferences sharedPreferences = context.getSharedPreferences("carritos", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        Set<String> list_idProducto = new HashSet<>();
-        Set<String> list_cantidad = new HashSet<>();
 
+        Set<String> lista_product_cantidad = new HashSet<>();
 
         Iterator<ProductoEntity> iterator = carrito.keySet().iterator();
 
         while (iterator.hasNext()) {
-            ProductoEntity productoEntity = iterator.next();
-            list_idProducto.add(String.valueOf(productoEntity.getIdProducto()));
-            list_cantidad.add(String.valueOf(carrito.get(productoEntity)));
-            System.err.println("Cantidad --> " + carrito.get(productoEntity));
-        }
+            ProductoEntity producto = iterator.next();
 
-        editor.putStringSet("list_carrito_idProducto", list_idProducto);
-        editor.putStringSet("list_carrito_cantidad", list_cantidad);
+            lista_product_cantidad.add(producto.getIdProducto() + "-" + carrito.get(producto));
+
+            System.err.println("1. Carro : " + producto + " : Cantidad --> " + carrito.get(producto));
+        }
+        editor.putStringSet("lista_carrito", lista_product_cantidad);
+
         editor.commit();
 
     }
+
+
+    // editor.putStringSet("list_carrito_idProducto", list_idProducto);
+    // editor.putStringSet("list_carrito_cantidad", list_cantidad);
+
+
 }
+
+

@@ -21,7 +21,7 @@ public class AdminPanelActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_admin_cliente, R.id.navigation_admin_pedido, R.id.navigation_admin_producto, R.id.navigation_admin_reserva)
+                R.id.navigation_admin_cliente, R.id.navigation_admin_pedido, R.id.navigation_admin_producto)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_admin);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);

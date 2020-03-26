@@ -11,12 +11,6 @@
         android:label="@string/title_pedido"
         tools:layout="@layout/fragment_admin_pedido" />
 
-    <fragment
-        android:id="@+id/navigation_admin_reserva"
-        android:name="com.example.proyecto_cafeteria.Fragment.Admin.Reserva.ReservaFragment"
-        android:label="@string/title_reserva"
-        tools:layout="@layout/fragment_admin_reserva" />
-
 
     <fragment
         android:id="@+id/navigation_admin_producto"

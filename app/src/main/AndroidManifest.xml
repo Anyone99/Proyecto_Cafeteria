@@ -18,13 +18,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:label="@string/app_name" android:name=".Main.UserPanelActivity"/>
-        <activity android:label="@string/app_name" android:name=".Main.Cliente.RegistrarPanelActivity"/>
-        <activity android:label="@string/app_name" android:name=".Main.AdminPanelActivity"/>
-        <activity android:label="@string/app_name" android:name=".Main.Cliente.ModificarPanelActivity"/>
-        <activity android:label="@string/app_name" android:name=".Main.Producto.AddProductoPanelActivity"/>
-        <activity android:label="@string/app_name" android:name=".Main.Producto.ModificarProductoPanelActivity"/>
-        <activity android:label="@string/app_name" android:name=".Main.Carrito"/>
+        <activity
+            android:name=".Main.UserPanelActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Main.Cliente.RegistrarPanelActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Main.AdminPanelActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Main.Cliente.ModificarPanelActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Main.Producto.AddProductoPanelActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Main.Producto.ModificarProductoPanelActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Main.Carrito"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Main.Cliente.ComentarioPanelActivity"
+            android:label="@string/app_name" />
 
 
     </application>

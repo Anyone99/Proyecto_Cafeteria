@@ -41,7 +41,6 @@ public class SQLiteDBHelper extends SQLiteOpenHelper {
     private static final String CREATE_PEDIDO = "CREATE TABLE IF NOT EXISTS " + Pedido.NOMBRE_TABLA + " ("
             + Pedido.ID_PEDIDO + " Integer Primary Key AUTOINCREMENT,"
             + Pedido.ID_USUARIO + " Integer,"
-            + Pedido.TIPO_PEDIDO + " Integer not null,"
             + Pedido.FECHA_PEDIDO + " Text not null,"
             + "FOREIGN KEY (" + Pedido.ID_USUARIO + ") REFERENCES " + User.TABLE_NAME + " ( " + User.ID_USUARIO + "))";
 
@@ -49,6 +48,7 @@ public class SQLiteDBHelper extends SQLiteOpenHelper {
             + ListaPedido.ID_LISTA + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + ListaPedido.ID_PEDIDO + " INTEGER, "
             + ListaPedido.ID_PRODUCTO + " INTEGER, "
+            + ListaPedido.CANTIDAD_PEDIDO + " INTEGER, "
             + "FOREIGN KEY (" + ListaPedido.ID_PEDIDO + ") REFERENCES " + Pedido.NOMBRE_TABLA + "(" + Pedido.ID_PEDIDO + "),"
             + "FOREIGN KEY (" + ListaPedido.ID_PRODUCTO + ") REFERENCES " + Producto.TABLE_NAME + "(" + Producto.ID_PRODUCTO + "))";
 

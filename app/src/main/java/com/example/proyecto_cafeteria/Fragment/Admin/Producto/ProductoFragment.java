@@ -43,8 +43,6 @@ public class ProductoFragment extends Fragment {
     private CardView cardView;
     private TextView text_producto_title;
 
-    private int idResrouce = R.layout.item_producto;
-
 
     private ProductoViewModel productoViewModel;
 
@@ -117,7 +115,7 @@ public class ProductoFragment extends Fragment {
                             listProducto.add(producto);
                             Toast.makeText(getContext(), listProducto.toString(), Toast.LENGTH_LONG).show();
                         }
-                        productoAdaptador = new ProductoAdaptador(getContext(), idResrouce, listProducto, R.id.image_producto, R.id.text_producto_title, R.id.text_producto_descripcion, 0, R.id.text_producto_id);
+                        productoAdaptador = new ProductoAdaptador(getContext(), listProducto);
                         listView_producto.setAdapter(productoAdaptador);
 
                     } else {
@@ -134,7 +132,7 @@ public class ProductoFragment extends Fragment {
                                 listProducto.add(producto);
                                 System.out.println(producto.toString());
                             }
-                            productoAdaptador = new ProductoAdaptador(getContext(), idResrouce, listProducto, R.id.image_producto, R.id.text_producto_title, R.id.text_producto_descripcion, 0, R.id.text_producto_id);
+                            productoAdaptador = new ProductoAdaptador(getContext(), listProducto);
                             listView_producto.setAdapter(productoAdaptador);
                         }
                     }
@@ -170,7 +168,7 @@ public class ProductoFragment extends Fragment {
                             Toast.makeText(getContext(), "No ha sido eliminado " + idProducto, Toast.LENGTH_SHORT).show();
 
                         }
-                        productoAdaptador = new ProductoAdaptador(getContext(), idResrouce, listProducto, R.id.image_producto, R.id.text_producto_title, R.id.text_producto_descripcion, 0, R.id.text_producto_id);
+                        productoAdaptador = new ProductoAdaptador(getContext(), listProducto);
                         listView_producto.setAdapter(productoAdaptador);
 
                     }

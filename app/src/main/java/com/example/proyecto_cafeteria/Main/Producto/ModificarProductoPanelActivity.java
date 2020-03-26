@@ -1,6 +1,7 @@
 package com.example.proyecto_cafeteria.Main.Producto;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.proyecto_cafeteria.Entry.Producto;
+import com.example.proyecto_cafeteria.Main.AdminPanelActivity;
 import com.example.proyecto_cafeteria.R;
 import com.example.proyecto_cafeteria.Utilidades.SQLiteDBHelper;
 
@@ -66,6 +68,9 @@ public class ModificarProductoPanelActivity extends AppCompatActivity {
                 String[] args = new String[]{String.valueOf(idProducto)};
                 int id = db.update(Producto.TABLE_NAME, contentValues, Producto.ID_PRODUCTO + " = ? ", args);
                 if (id > 0) {
+                    Intent intent = new Intent();
+                    intent.setClass(getApplicationContext(), AdminPanelActivity.class);
+                    startActivity(intent);
                     Toast.makeText(getApplicationContext(), "Modificado " + id, Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(getApplicationContext(), "No ha sido Modificado " + id, Toast.LENGTH_SHORT).show();

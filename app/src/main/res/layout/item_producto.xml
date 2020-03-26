@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:descendantFocusability="blocksDescendants"
@@ -9,13 +10,13 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card_producto"
         android:layout_width="match_parent"
-        android:layout_height="144dp"
+        android:layout_height="224dp"
         android:focusable="false"
         app:cardBackgroundColor="#7AACCFE0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="133dp">
+            android:layout_height="211dp">
 
             <ImageButton
                 android:id="@+id/image_producto"
@@ -35,10 +36,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"
                 app:layout_constraintBottom_toTopOf="@+id/text_producto_title"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.616"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/image_producto"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,14 +48,15 @@
                 android:id="@+id/text_producto_descripcion"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginBottom="5dp"
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/image_producto"
-                app:layout_constraintTop_toBottomOf="@+id/text_producto_title" />
+                app:layout_constraintTop_toBottomOf="@+id/text_producto_title"
+                app:layout_constraintVertical_bias="0.025" />
 
             <TextView
                 android:id="@+id/text_producto_title"
@@ -65,6 +68,16 @@
                 android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@+id/image_producto"
                 app:layout_constraintTop_toTopOf="@id/text_producto_id" />
+
+            <TextView
+                android:id="@+id/text_producto_precio"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.652"
+                app:layout_constraintStart_toEndOf="@+id/image_producto"
+                app:layout_constraintTop_toBottomOf="@+id/text_producto_descripcion" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

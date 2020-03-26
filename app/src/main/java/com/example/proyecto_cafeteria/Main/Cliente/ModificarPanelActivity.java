@@ -1,7 +1,6 @@
 package com.example.proyecto_cafeteria.Main.Cliente;
 
 import android.content.ContentValues;
-import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.proyecto_cafeteria.Entry.User;
 import com.example.proyecto_cafeteria.R;
 import com.example.proyecto_cafeteria.Utilidades.SQLiteDBHelper;
-import com.example.proyecto_cafeteria.Fragment.Admin.Cliente.ClienteFragment;
 
 public class ModificarPanelActivity extends AppCompatActivity {
 
@@ -63,6 +61,8 @@ public class ModificarPanelActivity extends AppCompatActivity {
         button_modificar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 SQLiteDBHelper sqLiteDBHelper = new SQLiteDBHelper(getApplicationContext().getApplicationContext());
                 SQLiteDatabase db = sqLiteDBHelper.getWritableDatabase();
                 ContentValues contentValues = new ContentValues();
@@ -72,24 +72,19 @@ public class ModificarPanelActivity extends AppCompatActivity {
                 contentValues.put(User.EMAIL, edit_email.getText().toString());
                 contentValues.put(User.FNACIMIENTO, edit_fnacimiento.getText().toString());
                 contentValues.put(User.PASSWORD, edit_password.getText().toString());
-                contentValues.put(User.TELEFONO, edit_telefono.getText().toString());
+                contentValues.put(User.TELEFONO, Integer.parseInt(edit_telefono.getText().toString()));
 
                 String[] args = new String[]{email};
 
                 int id = db.update(User.TABLE_NAME, contentValues, "email = ? ", args);
 
                 if (id > 0) {
-                    Toast.makeText(getApplicationContext(),"Modificado ! ", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent();
-                    intent.setClass(getApplicationContext(), ClienteFragment.class);
-                    startActivity(intent);
 
-                }else{
-                    Toast.makeText(getApplicationContext(),"No Modificado ! ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Modificado ! ", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "No Modificado ! ", Toast.LENGTH_LONG).show();
                 }
                 db.close();
-
-
             }
         });
 

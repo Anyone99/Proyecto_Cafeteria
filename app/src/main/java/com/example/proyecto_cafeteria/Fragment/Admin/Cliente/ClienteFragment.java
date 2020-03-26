@@ -74,28 +74,32 @@ public class ClienteFragment extends Fragment {
 
         listView = (ListView) getActivity().findViewById(R.id.listView_Cliente);
 
+
         button_buscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity().getApplicationContext(), edit_buscar.getText().toString(), Toast.LENGTH_LONG).show();
+                if (edit_buscar.getText().toString().length() == 0) {
+                    Toast.makeText(getContext(), "El campo de busqueda no puede ser vacío", Toast.LENGTH_SHORT).show();
+                } else {
+                    SQLiteDBHelper sqLiteDBHelper = new SQLiteDBHelper(getActivity().getApplicationContext());
+                    SQLiteDatabase db = sqLiteDBHelper.getWritableDatabase();
+                    String[] args = new String[]{edit_buscar.getText().toString()};
+                    String[] columna = new String[]{User.ID_USUARIO, User.NOMBRE, User.APELLIDO, User.FNACIMIENTO, User.PASSWORD, User.TELEFONO};
+                    Cursor cursor = db.query(User.TABLE_NAME, columna, "email = ?", args, null, null, null);
+                    UserEntity user = new UserEntity();
 
-                SQLiteDBHelper sqLiteDBHelper = new SQLiteDBHelper(getActivity().getApplicationContext());
-                SQLiteDatabase db = sqLiteDBHelper.getWritableDatabase();
-                String[] args = new String[]{edit_buscar.getText().toString()};
-                String[] columna = new String[]{User.ID_USUARIO, User.NOMBRE, User.APELLIDO, User.FNACIMIENTO, User.PASSWORD, User.TELEFONO};
-                Cursor cursor = db.query(User.TABLE_NAME, columna, "email = ?", args, null, null, null);
-                UserEntity user = new UserEntity();
+                    if (cursor != null) {
+                        if (cursor.moveToFirst()) {
+                            user = new UserEntity(Integer.parseInt(cursor.getString(0)), cursor.getString(1), cursor.getString(2), cursor.getString(3), Integer.parseInt(cursor.getString(5)), edit_buscar.getText().toString(), cursor.getString(4));
+                            listaCliente.add(user);
+                            ArrayAdapter adapter = new ArrayAdapter(getContext(), R.layout.item_cliente, listaCliente);
+                            listView.setAdapter(adapter);
 
-                if (cursor != null) {
-                    if (cursor.moveToFirst()) {
-                        user = new UserEntity(Integer.parseInt(cursor.getString(0)), cursor.getString(1), cursor.getString(2), cursor.getString(3), Integer.parseInt(cursor.getString(5)), edit_buscar.getText().toString(), cursor.getString(4));
-                        listaCliente.add(user);
-                        ArrayAdapter adapter = new ArrayAdapter(getContext(), R.layout.item_cliente, listaCliente);
-                        listView.setAdapter(adapter);
-
+                        } else {
+                            Toast.makeText(getContext(), "No existe el correo ", Toast.LENGTH_SHORT).show();;
+                        }
                     }
                 }
-
             }
         });
 

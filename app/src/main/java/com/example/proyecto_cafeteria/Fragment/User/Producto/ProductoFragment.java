@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -32,8 +31,7 @@ import java.util.List;
 public class ProductoFragment extends Fragment {
 
     private ProductoViewModel productoViewModel;
-    private EditText edit_buscar;
-    private Button button_buscar, button_añadir;
+    private Button button_añadir;
     private FloatingActionButton button_carrito;
     private List<ProductoEntity> listProducto = new ArrayList<>();
     private ListView listView_producto;
@@ -63,9 +61,6 @@ public class ProductoFragment extends Fragment {
 
     public void init() {
 
-
-        edit_buscar = (EditText) getActivity().findViewById(R.id.edit_usuario_producto_buscar);
-        button_buscar = (Button) getActivity().findViewById(R.id.button_usu_producto_buscar);
         button_añadir = (Button) getActivity().findViewById(R.id.button_usu_producto_add);
         button_carrito = (FloatingActionButton) getActivity().findViewById(R.id.actionButton_usuario_carrito);
         listView_producto = (ListView) getActivity().findViewById(R.id.listView_usu_producto);

@@ -43,6 +43,8 @@
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="af8b2a97-9c40-4100-ba7f-ce638a750152" dataset="main.Producto" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="af8b2a97-9c40-4100-ba7f-ce638a750152" dataset="main.Admin" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="af8b2a97-9c40-4100-ba7f-ce638a750152" dataset="main.ListaPedidos" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="af8b2a97-9c40-4100-ba7f-ce638a750152" dataset="main.ListaPedido" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="af8b2a97-9c40-4100-ba7f-ce638a750152" dataset="main.Usuario" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="af8b2a97-9c40-4100-ba7f-ce638a750152" dataset="main.android_metadata" active-filter-id="EMPTY_FILTER" />
   </component>

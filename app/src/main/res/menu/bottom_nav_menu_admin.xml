@@ -6,16 +6,11 @@
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/title_pedido" />
 
-    <item
-        android:id="@+id/navigation_admin_reserva"
-        android:title="@string/title_reserva" />
 
     <item
         android:id="@+id/navigation_admin_producto"
         android:icon="@drawable/ic_dashboard_black_24dp"
         android:title="@string/title_producto" />
-
-
 
     <item
         android:id="@+id/navigation_admin_cliente"

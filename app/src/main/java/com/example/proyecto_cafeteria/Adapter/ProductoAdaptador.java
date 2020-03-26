@@ -7,7 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.example.proyecto_cafeteria.Entity.ProductoEntity;
+import com.example.proyecto_cafeteria.R;
 
 import java.util.List;
 
@@ -15,17 +17,11 @@ public class ProductoAdaptador extends BaseAdapter {
 
     private Context context;
     private List<ProductoEntity> lProductos;
-    private int idImagen, idNombre, idDescripcion, idPrecio, idProducto,idResource;
 
-    public ProductoAdaptador(Context context, int idResource, List<ProductoEntity> lProducto,int idImagen, int idNombre, int idDescripcion, int idPrecio, int idProducto) {
+    public ProductoAdaptador(Context context, List<ProductoEntity> lProducto) {
         this.context = context;
-        this.idResource = idResource;
         this.lProductos = lProducto;
-        this.idImagen = idImagen;
-        this.idDescripcion = idDescripcion;
-        this.idNombre = idNombre;
-        this.idPrecio = idPrecio;
-        this.idProducto = idProducto;
+
     }
 
     @Override
@@ -46,26 +42,25 @@ public class ProductoAdaptador extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        convertView = LayoutInflater.from(context).inflate(idResource,null);
+        convertView = LayoutInflater.from(context).inflate(R.layout.item_producto, null);
 
         ProductoEntity productoEntity = (ProductoEntity) getItem(position);
 
-        ImageView imageView = (ImageView) convertView.findViewById(idImagen);
-        TextView titleView = (TextView) convertView.findViewById(idNombre);
-        TextView descripcionView = (TextView) convertView.findViewById(idDescripcion);
-        TextView precioView = (TextView) convertView.findViewById(idPrecio);
+        ImageView imageView = (ImageView) convertView.findViewById(R.id.image_producto);
+        TextView titleView = (TextView) convertView.findViewById(R.id.text_producto_title);
+        TextView descripcionView = (TextView) convertView.findViewById(R.id.text_producto_descripcion);
+        TextView precioView = (TextView) convertView.findViewById(R.id.text_producto_precio);
+        TextView idView = (TextView) convertView.findViewById(R.id.text_producto_id);
 
-        if (idProducto>0){
-            TextView idView = (TextView) convertView.findViewById(idProducto);
-            idView.setText(String.valueOf(productoEntity.getIdProducto()));
-
-        }
+        idView.setText(String.valueOf(productoEntity.getIdProducto()));
 
         imageView.setImageResource(productoEntity.getIdImagen());
 
         titleView.setText(productoEntity.getNombre());
         descripcionView.setText(productoEntity.getDescripcion());
         precioView.setText(String.valueOf(productoEntity.getPrecio()) + "€");
+
+        notifyDataSetChanged();
 
         return convertView;
     }

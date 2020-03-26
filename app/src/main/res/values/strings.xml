@@ -36,10 +36,21 @@
     <string name="text_precioTotal">PrecioTotal</string>
     <string name="text_seleccionaTodos">Todos</string>
     <string name="text_Total">Total :</string>
-    <string name="text_Pagar">Pagar</string>
+    <string name="text_terminar">Terminar</string>
     <string name="text_precioPrincipal">0.0€</string>
     <string name="text_carrito">Carrito</string>
     <string name="text_cero">0</string>
+    <string name="button_pedido">Pedido</string>
+    <string name="text_contactUs">Contactar con Nosotros</string>
+    <string name="text_coma">,</string>
+    <string name="text_aceptar">Aceptar</string>
+    <string name="text_pedido_historico">Pedido Historico</string>
+    <string name="dialog_no_existe_usuario">La contraseña o el correo está mal, por favor volver a introducir</string>
+    <string name="error_usuario_cuenta">Error de Iniciar la sessión</string>
+    <string name="text_salir">Exit</string>
+    <string name="text_fecha">Fecha :</string>
+    <string name="text_comentario">Comentario</string>
+    <string name="text_enviar">Enviar</string>
 
 
 </resources>

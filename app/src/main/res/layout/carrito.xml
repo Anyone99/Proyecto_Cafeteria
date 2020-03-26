@@ -40,66 +40,46 @@
         android:orientation="horizontal">
 
 
-        <CheckBox
-            android:id="@+id/check_carrito"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:button="@android:drawable/radiobutton_off_background"
-            android:text="@string/text_seleccionaTodos"
-            android:textColor="#FF000000"
-            android:textSize="16sp" />
-
         <TextView
-            android:id="@+id/prices"
+            android:id="@+id/text_carrito_precio"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
-            android:layout_toStartOf="@+id/button3"
-            android:layout_toLeftOf="@+id/button3"
+            android:layout_toStartOf="@+id/button_carrito_terminar"
+            android:layout_toLeftOf="@+id/button_carrito_terminar"
             android:gravity="center"
             android:text="@string/text_precioPrincipal"
             android:textColor="#FFFA4F4F"
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/test_carrito_total"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"
             android:layout_marginTop="3dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:layout_toStartOf="@+id/prices"
-            android:layout_toLeftOf="@+id/prices"
+            android:layout_toStartOf="@+id/text_carrito_precio"
+            android:layout_toLeftOf="@+id/text_carrito_precio"
             android:gravity="center"
             android:text="@string/text_Total"
             android:textColor="#FF000000"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_toStartOf="@+id/button4"
-            android:layout_toLeftOf="@+id/button4"
-            android:text="@string/text_Pagar"
-            android:background="#FFFFB11C"
-            />
-
-        <Button
-            android:id="@+id/button4"
+            android:id="@+id/button_carrito_terminar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginEnd="1dp"
-            android:layout_marginRight="1dp"
-            android:text="@string/button_eliminar"
-            android:background="#FFFA4F4F"/>
+            android:layout_marginEnd="-4dp"
+            android:layout_marginRight="-4dp"
+            android:background="#FFFFB11C"
+            android:text="@string/text_terminar" />
 
     </RelativeLayout>
 </RelativeLayout>

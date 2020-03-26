@@ -17,6 +17,10 @@ public class ProductoEntity {
         this.idImagen = idImagen;
     }
 
+    public  ProductoEntity(){
+
+    }
+
     public int getIdProducto() {
         return idProducto;
     }
