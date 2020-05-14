@@ -7,21 +7,21 @@
 
     <fragment
         android:id="@+id/navigation_admin_pedido"
-        android:name="com.example.proyecto_cafeteria.Fragment.Admin.Pedido.PedidoFragment"
+        android:name="com.example.proyecto_cafeteria.fragment.Admin.Pedido.PedidoFragment"
         android:label="@string/title_pedido"
         tools:layout="@layout/fragment_admin_pedido" />
 
 
     <fragment
         android:id="@+id/navigation_admin_producto"
-        android:name="com.example.proyecto_cafeteria.Fragment.Admin.Producto.ProductoFragment"
+        android:name="com.example.proyecto_cafeteria.fragment.Admin.Producto.ProductoFragment"
         android:label="@string/title_producto"
         tools:layout="@layout/fragment_admin_producto" />
 
 
     <fragment
         android:id="@+id/navigation_admin_cliente"
-        android:name="com.example.proyecto_cafeteria.Fragment.Admin.Cliente.ClienteFragment"
+        android:name="com.example.proyecto_cafeteria.fragment.Admin.Cliente.ClienteFragment"
         android:label="@string/title_cliente"
         tools:layout="@layout/fragment_admin_cliente" />
 </navigation>

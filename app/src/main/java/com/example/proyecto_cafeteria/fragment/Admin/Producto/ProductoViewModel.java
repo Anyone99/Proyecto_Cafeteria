@@ -1,16 +1,16 @@
-package com.example.proyecto_cafeteria.Fragment.User.Perfil;
+package com.example.proyecto_cafeteria.fragment.Admin.Producto;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class PerfilViewModel extends ViewModel {
+public class ProductoViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public PerfilViewModel() {
+    public ProductoViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is perfil fragment");
+        mText.setValue("Producto");
     }
 
     public LiveData<String> getText() {

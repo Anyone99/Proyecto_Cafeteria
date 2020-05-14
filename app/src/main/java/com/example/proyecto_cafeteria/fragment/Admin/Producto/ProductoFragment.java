@@ -1,4 +1,4 @@
-package com.example.proyecto_cafeteria.Fragment.Admin.Producto;
+package com.example.proyecto_cafeteria.fragment.Admin.Producto;
 
 import android.content.Intent;
 import android.database.Cursor;

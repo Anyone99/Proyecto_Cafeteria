@@ -1,5 +1,7 @@
-package com.example.proyecto_cafeteria.Fragment.Admin.Pedido;
+package com.example.proyecto_cafeteria.fragment.User.Pedido;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,27 +17,24 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.proyecto_cafeteria.Adapter.PedidoAdapter;
 import com.example.proyecto_cafeteria.Entity.PedidoEntity;
+import com.example.proyecto_cafeteria.Entity.UserEntity;
 import com.example.proyecto_cafeteria.Entry.Pedido;
+import com.example.proyecto_cafeteria.Entry.User;
 import com.example.proyecto_cafeteria.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class PedidoFragment extends Fragment {
 
     private PedidoViewModel pedidoViewModel;
-
     private ListView listView;
-    private TextView text_email, text_idPedido, text_precio;
-    private List<Pedido> pedidos = new ArrayList<>();
-
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         pedidoViewModel =
                 ViewModelProviders.of(this).get(PedidoViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_admin_pedido, container, false);
-        final TextView textView = root.findViewById(R.id.text_admin_pedido);
+        View root = inflater.inflate(R.layout.fragment_pedido, container, false);
+        final TextView textView = root.findViewById(R.id.text_pedido);
         pedidoViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
@@ -46,16 +45,24 @@ public class PedidoFragment extends Fragment {
     }
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+    public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        System.out.println("onActivityCreated******************************");
         init();
     }
 
     public void init() {
+
         listView = (ListView) getActivity().findViewById(R.id.list_usuario_pedido_historico);
-        List<PedidoEntity> list = Pedido.getAll(getContext());
+
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences("loginSession", Context.MODE_PRIVATE);
+        String email = sharedPreferences.getString("loginUser", "null");
+
+        UserEntity userEntity = User.findByEmail(email, getContext());
+
+        List<PedidoEntity> list = Pedido.findByUser(userEntity, getContext());
+
         PedidoAdapter pedidoAdapter = new PedidoAdapter(getContext(), list);
+
         listView.setAdapter(pedidoAdapter);
 
     }

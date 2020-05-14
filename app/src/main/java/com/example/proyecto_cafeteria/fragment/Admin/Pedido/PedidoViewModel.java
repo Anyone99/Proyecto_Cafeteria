@@ -1,4 +1,4 @@
-package com.example.proyecto_cafeteria.Fragment.Admin.Pedido;
+package com.example.proyecto_cafeteria.fragment.Admin.Pedido;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -10,7 +10,7 @@ public class PedidoViewModel extends ViewModel {
 
     public PedidoViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is pedido fragment");
+        mText.setValue("Pedido");
     }
 
     public LiveData<String> getText() {

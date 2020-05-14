@@ -79,7 +79,6 @@ public class ModificarPanelActivity extends AppCompatActivity {
                 int id = db.update(User.TABLE_NAME, contentValues, "email = ? ", args);
 
                 if (id > 0) {
-
                     Toast.makeText(getApplicationContext(), "Modificado ! ", Toast.LENGTH_LONG).show();
                 } else {
                     Toast.makeText(getApplicationContext(), "No Modificado ! ", Toast.LENGTH_LONG).show();

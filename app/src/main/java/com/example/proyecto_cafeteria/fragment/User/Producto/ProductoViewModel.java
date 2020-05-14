@@ -1,16 +1,16 @@
-package com.example.proyecto_cafeteria.Fragment.User.Pedido;
+package com.example.proyecto_cafeteria.fragment.User.Producto;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class PedidoViewModel extends ViewModel {
+public class ProductoViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public PedidoViewModel() {
+    public ProductoViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is pedido fragment");
+        mText.setValue("Producto");
     }
 
     public LiveData<String> getText() {

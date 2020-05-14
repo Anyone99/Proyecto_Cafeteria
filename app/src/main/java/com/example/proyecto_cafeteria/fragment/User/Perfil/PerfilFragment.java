@@ -1,4 +1,4 @@
-package com.example.proyecto_cafeteria.Fragment.User.Perfil;
+package com.example.proyecto_cafeteria.fragment.User.Perfil;
 
 import android.content.Context;
 import android.content.Intent;
